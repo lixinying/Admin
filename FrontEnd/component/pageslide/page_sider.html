@@ -1,0 +1,44 @@
+<link href="component/pageslide/sb-admin-2.css" rel="stylesheet">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="position: static;">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="backendProduct/index2">Hachi:CMS</a>
+        <button class="button-menu-mobile open-left">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <!-- /.navbar-header -->
+    <ul class="nav navbar-top-links navbar-right">
+        <li><a href="backendLogin/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+    </ul>
+    <!-- /.navbar-top-links -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img class="img-circle" alt="User Image" onerror="this.src='//placeholdit.imgix.net/~text?txtfont=monospace,bold&amp;bg=DD4B39&amp;txtclr=ffffff&amp;txt=A&amp;w=45&amp;h=45&amp;txtsize=16'" src="ecb72a73926c6c0fc3a599dae43203e7.png">
+                    </div>
+                    <div class="pull-left info">
+                        <p class="ng-binding">
+                            lixinying
+                        </p>
+                        <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <li class="first_level" ng-class=" {active:$index == selected}" ng-click="select($index)" ng-repeat="menu in menuItems">
+                    <a href=""><i class="fa fa-{{menu.icon}}"></i> <span class="menu">{{menu.title}}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse " ng-class="{in:$index == selected}">
+                        <li><a href="backendProduct" ng-repeat="secondmenu in menu.second_menu">{{secondmenu.title}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
