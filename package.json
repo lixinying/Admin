@@ -1,0 +1,22 @@
+{
+  "name": "hachi_cms",
+  "version": "3.0.0",
+  "description": "frontend all angular",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lixinying/Admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lixinying/Admin/issues"
+  },
+  "homepage": "https://github.com/lixinying/Admin#readme",
+  "dependencies": {
+    "angular-md5": "^0.1.10"
+  }
+}
