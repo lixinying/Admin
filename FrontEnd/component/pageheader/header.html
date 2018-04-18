@@ -1,7 +1,19 @@
-<div class="main-header">
-    <!-- Logo -->
-    <a class="logo">
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">{{username}}</span>
-    </a>
-</div>
+
+<link href="component/pageheader/header.css" rel="stylesheet">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;    position: static;
+                 min-height: 100%;">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle"  style="display:block" data-toggle="collapse" ng-click="menuToggle()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Hachi:CMS</a>
+    </div>
+    <!-- /.navbar-header -->
+    <ul class="nav navbar-top-links navbar-right">
+        <li><a ng-click=""><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+    </ul>
+</nav>

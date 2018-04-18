@@ -1,0 +1,22 @@
+	.blue .navbar-default {
+	    background-color: #3c8dbc;
+	    border-color: #3c8dbc;
+	}
+
+	.blue .navbar-default {
+	    background-color: #3c8dbc;
+	    border-color: #3c8dbc;
+	}
+
+
+	.blue .navbar-default .navbar-brand {
+	    color: #f9f4f4;
+	}
+
+	@media (min-width: 768px) {
+	    #wrapper.enlarged .navbar-brand {
+	        display: none;
+	    }
+	}
+
+	

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['dateApp', 'ui.bootstrap', 'ui.router', 'oc.lazyLoad', 'ngResource','angular-md5','ngStorage']);
+var app = angular.module('myApp', ['dateApp', 'ui.bootstrap', 'ui.router', 'oc.lazyLoad', 'ngResource', 'angular-md5', 'ngStorage']);
 app.config(function($httpProvider) {
     $httpProvider.defaults.transformRequest = function(obj) {
         var str = [];
@@ -13,4 +13,11 @@ app.config(function($httpProvider) {
 
 });
 
+    app.controller('AppController', function($scope) {
+        $scope.enlarged = false;
 
+        this.toggle = function() {
+            $scope.enlarged = !$scope.enlarged;
+        }
+
+    })

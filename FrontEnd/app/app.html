@@ -1,6 +1,9 @@
-<div id='wrapper'>
+<div id='wrapper' ng-class="{enlarged:enlarged}" ng-controller="AppController as ctrl">
+ <page-header on-toggle="ctrl.toggle()"></page-header>
+
     <page-sider></page-sider>
     <div id="page-wrapper">
         <ui-view></ui-view>
     </div>
+
 </div>
