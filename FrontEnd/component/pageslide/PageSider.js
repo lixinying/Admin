@@ -40,21 +40,7 @@
                }
            };
 
-           $scope.logout = function() {
-               $http({
-                   method: 'POST',
-                   url: appSettings.host + '/BackendLogin/logout',
-               }).success(function(data, status) {
-
-                       $http.defaults.headers.common['Authorization'] = "Basic";
-                       $state.go("login");
-                  
-
-               }).error(function() {
-                   $scope.authError = "error"
-               });
-
-           }
+           
 
        }
    });
