@@ -15,10 +15,10 @@
                         <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
-                <li class="first_level" ng-class=" {active:$index == selected}" ng-click="select($index)" ng-repeat="menu in menuItems">
-                    <a href=""><i class="fa fa-{{menu.icon}}"></i> <span class="menu">{{menu.title}}</span><span class="fa arrow"></span></a>
+                <li class="first_level" ng-class=" {active:$index == selected}"  ng-repeat="menu in menuItems">
+                    <a ng-click="select($index)"><i class="fa fa-{{menu.icon}}"></i> <span class="menu">{{menu.title}}</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse " ng-class="{in:$index == selected}">
-                        <li><a href="backendProduct" ng-repeat="secondmenu in menu.second_menu">{{secondmenu.title}}</a></li>
+                        <li> <a  ui-sref="{{secondmenu.state}}" ng-repeat="secondmenu in menu.second_menu">{{secondmenu.title}}</a></li>
                     </ul>
                 </li>
             </ul>

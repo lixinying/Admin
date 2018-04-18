@@ -6,11 +6,11 @@
                    icon: "cubes",
                    state: "dashboard",
                    second_menu: [{
+                       title: "Dashboard",
+                       state: "app.dashboard",
+                   },{
                        title: "Products Master",
-                       state: "chopslot",
-                   }, {
-                       title: "Error Products Master",
-                       state: "chopslot",
+                       state: "app.product",
                    }, {
                        title: "Temp Products Update",
                        state: "chopslot",
