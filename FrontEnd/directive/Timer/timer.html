@@ -1,29 +1,36 @@
-<style  type="text/css">
-    #TimeObj{
-        width:80%;
-        margin:0 auto;
-
-
+<style type="text/css">
+    #TimeObj {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
     }
-    .gray_sm{
-        color:gray;
-        font-size:13px;
+
+    .gray_sm {
+        color: gray;
+        font-size: 13px;
     }
-    .parts_4{
+
+    .parts_4 {
         float: left;
-        width:20%; 
-        text-align:center;
+        width: 20%;
+        text-align: center;
     }
-    .float_left{
-        float: left; 
+
+    .float_left {
+        float: left;
     }
-    #TimeObj p{
-        margin:0px;
+
+    #TimeObj p {
+        margin: 0px;
+    }
+
+    .first {
+        margin-left: 10%;
     }
 </style>
 <div id="TimeObj">
     <div id="time_num">
-        <div class="parts_4 days">
+        <div class="parts_4 days first">
             <p id="days">{{days||00}}</p>
             <p class="gray_sm">DAYS</p>
         </div>
@@ -37,18 +44,16 @@
         <div class="float_left">
             <p>:</p>
         </div>
-        <div class="parts_4"> 
+        <div class="parts_4">
             <p id="mins">{{minutes||00}}</p>
             <p class="gray_sm">MINS</p>
         </div>
         <div class="float_left">
             <p>:</p>
         </div>
-        <div class="parts_4"> 
+        <div class="parts_4">
             <p id="secs">{{seconds||00}}</p>
             <p class="gray_sm">SECS</p>
         </div>
     </div>
-
-
 </div>
