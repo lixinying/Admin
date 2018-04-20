@@ -3,8 +3,6 @@ app.controller("LoginController", ['$scope', '$state', 'userdata', 'md5', '$http
         $scope.login = function() {
             $scope.authError = ""
             var password = md5.createHash($scope.password);
-            var authdata = Base64.encode($scope.username + ':' + $scope.password);
-            $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
             $http({
                 method: 'POST',
                 url: appSettings.host + '/BackendLogin/login_validation',
@@ -14,9 +12,8 @@ app.controller("LoginController", ['$scope', '$state', 'userdata', 'md5', '$http
                 }
             }).success(function(data, status) {
                 if (data.status) {
-                    $localStorage.auth = authdata;
                     userdata.setData(data.user);
-                     $localStorage.user=data.user;
+                    $localStorage.user = data.user;
                     $state.go('app.dashboard');
                 } else {
                     $scope.authError = "error"
@@ -27,20 +24,20 @@ app.controller("LoginController", ['$scope', '$state', 'userdata', 'md5', '$http
             });
         };
         $scope.autoLogin = function() {
-           $http({
+            $http({
                 method: 'POST',
                 url: appSettings.host + '/BackendLogin/login_validation',
             }).success(function(data, status) {
                 if (data.status) {
                     userdata.setData(data.user);
-                    $localStorage.user=data.user;
+                    $localStorage.user = data.user;
                     $state.go('app.dashboard');
                 } else {
                     $state.go('login');
                 }
             }).error(function() {
                 $state.go('login');
-            }); 
+            });
         }
         $scope.autoLogin();
     }
