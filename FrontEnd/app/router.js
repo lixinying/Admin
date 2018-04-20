@@ -24,6 +24,14 @@
              .state('app.product', {
                  url: '/product',
                  templateUrl: 'app/product/product.html',
+                    controller: 'ProductController',
+                  resolve: {
+                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+
+
+                         return $ocLazyLoad.load('app/Product/ctrl.js');
+                     }]
+                 }
              })
              .state('app.dashboard', {
                  url: '/dashboard',

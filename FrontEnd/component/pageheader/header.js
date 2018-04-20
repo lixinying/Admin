@@ -1,4 +1,4 @@
-   (function(angular) {
+
        app.component("pageHeader", {
            templateUrl: "component/pageheader/header.html",
            controller: function($scope, $http,appSettings,$state) {
@@ -27,4 +27,3 @@
 
            }
        });
-   })(window.angular);
