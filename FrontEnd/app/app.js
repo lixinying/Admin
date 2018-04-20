@@ -13,11 +13,15 @@ app.config(function($httpProvider) {
 
 });
 
-    app.controller('AppController', function($scope) {
-        $scope.enlarged = false;
+app.controller('AppController', function($scope, $localStorage, userdata) {
+    $scope.enlarged = false;
 
-        this.toggle = function() {
-            $scope.enlarged = !$scope.enlarged;
-        }
+    this.toggle = function() {
+        $scope.enlarged = !$scope.enlarged;
+    }
 
-    })
+    if ($localStorage.user) {
+        userdata.setData($localStorage.user);
+    }
+
+})

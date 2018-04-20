@@ -16,6 +16,7 @@ app.controller("LoginController", ['$scope', '$state', 'userdata', 'md5', '$http
                 if (data.status) {
                     $localStorage.auth = authdata;
                     userdata.setData(data.user);
+                     $localStorage.user=data.user;
                     $state.go('app.dashboard');
                 } else {
                     $scope.authError = "error"
@@ -32,6 +33,7 @@ app.controller("LoginController", ['$scope', '$state', 'userdata', 'md5', '$http
             }).success(function(data, status) {
                 if (data.status) {
                     userdata.setData(data.user);
+                    $localStorage.user=data.user;
                     $state.go('app.dashboard');
                 } else {
                     $state.go('login');
