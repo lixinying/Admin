@@ -1,16 +1,19 @@
 {
-  "name": "hachi_cms",
+  "name": "cms3.0",
   "version": "3.0.0",
-  "description": "frontend all angular",
-  "main": "index",
+  "description": "all angular ",
+  "main": "FrontEnd index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lixinying/Admin.git"
   },
-  "author": "",
+  "keywords": [
+    "1qaz\"WSX"
+  ],
+  "author": "lixinying",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lixinying/Admin/issues"
